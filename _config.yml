@@ -28,7 +28,7 @@ twitter_username: secismyth
 github_username:  security-is-myth
 
 # Build settings
-theme: jekyll-theme-cayman
+theme: minima
 plugins:
   - jekyll-feed
 
