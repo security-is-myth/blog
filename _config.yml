@@ -23,7 +23,7 @@ email: secismyth@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Security-is-myth is an Indian CTF Team where we share our experiences and writeups for the CTF's we are attempting in the future.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://security-is-myth.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://security-is-myth.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: secismyth
 github_username:  security-is-myth
 
