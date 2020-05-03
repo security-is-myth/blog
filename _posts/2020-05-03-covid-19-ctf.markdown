@@ -1,0 +1,100 @@
+---
+layout: post
+title:  "COVID-19 CTF Writeup"
+date:   2020-05-03 05:35:11 +0530
+categories: CTF COVID-19
+author: Thanga Ayannar
+---
+
+## Covid Scammers
+
+They have given binary file (ELF 32 bit) need to answer the below questions
+
+
+
+The heading that contains [Not confirmed] means it is found after the ctf is over, it may or maynot be the correct flag.
+
+### 1. Free Flag
+
+You've been contacted by a high-end but morally ambiguous finance company (unhackable-bitcoin-wallet.com) to investigate a data breach. The box in question is a mail server in their internal network, a sample of the malware found on the system has been pulled and given to you. Your task, should you choose to accept it, is to reverse-engineer the sample and locate, fuzz and exploit the C2 server, and then hack-back to learn about the malicious actor and recover the stolen documents.
+
+Download this binary to begin!
+
+Look for the free flag. Get on the scoreboard!
+
+given the binary file
+
+```
+covid{freeFlagLookatMe}
+```
+
+
+### 2. Arch
+
+What architecture is this sample compiled for?
+```
+x86
+```
+
+### 3. Who Me? [Not confirmed]
+
+What is this malware sample called (not the actual binary name)?
+```
+TheCovidBotNet
+```
+
+### 4. Scouting
+
+What is the C2 server? Provide the domain as the answer.
+```
+covidfunds.net
+```
+
+### 5. This is nice, might stay a while...
+
+How does the malware persist? SHA1 hash the path of the persistence location.
+
+echo -n "/full/path" | sha1sum
+
+```
+/etc/init.d/zorr
+```
+
+### 6. License and Registration Please
+
+The malware creates a UUID and stores it in a file, what is the name of this file. 
+Provide the SHA1 hash of the full path as the flag.
+
+```
+/tmp/.serverauth.tn6aUcM0uM
+```
+
+### 8. Shared Secrets [Not confirmed]
+
+The malware creates a shared-memory object and stores a flag inside. Recover the flag.
+```
+covid{kEepItSeCrETmR.Fr0dO!}
+```
+
+### 9. PROTOCOL1 [Not confirmed]
+
+What string/message does the malware use to register itself with the C2 server as a new infected host?
+
+Include the FULL message (including client specific data).
+
+All protocol questions will be less points after this one.
+
+```
+NEW goHct1tkuuvjiey0w9B
+```
+![image](/blog/assets/images/ltrace dump.png)
+
+![image](/blog/assets/images/string search in radare izz command.png)
+ 
+## Tom Nook - Internet traffic - Part I
+
+- Challenge contain a .pcap file inside 7z archive
+- when i analyzed the protocol hierarchy
+- it contains tcp,ssh,http
+![image](/blog/assets/images/wireshark.png)
+- when i checked the first tcp stream i got the flag

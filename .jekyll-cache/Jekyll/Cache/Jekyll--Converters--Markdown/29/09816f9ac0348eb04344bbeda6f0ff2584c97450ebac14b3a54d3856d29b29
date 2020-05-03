@@ -1,0 +1,90 @@
+I"�<h2 id="covid-scammers">Covid Scammers</h2>
+
+<p>They have given binary file (ELF 32 bit) need to answer the below questions</p>
+
+<p><img src="/blog/assets/images/string search in radare izz command.png" alt="image" /></p>
+
+<p>The heading that contains [Not confirmed] means it is found after the ctf is over, it may or maynot be the correct flag.</p>
+
+<h3 id="1-free-flag">1. Free Flag</h3>
+
+<p>You’ve been contacted by a high-end but morally ambiguous finance company (unhackable-bitcoin-wallet.com) to investigate a data breach. The box in question is a mail server in their internal network, a sample of the malware found on the system has been pulled and given to you. Your task, should you choose to accept it, is to reverse-engineer the sample and locate, fuzz and exploit the C2 server, and then hack-back to learn about the malicious actor and recover the stolen documents.</p>
+
+<p>Download this binary to begin!</p>
+
+<p>Look for the free flag. Get on the scoreboard!</p>
+
+<p>given the binary file</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>covid{freeFlagLookatMe}
+</code></pre></div></div>
+
+<h3 id="2-arch">2. Arch</h3>
+
+<p>What architecture is this sample compiled for?</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x86
+</code></pre></div></div>
+
+<h3 id="3-who-me-not-confirmed">3. Who Me? [Not confirmed]</h3>
+
+<p>What is this malware sample called (not the actual binary name)?</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TheCovidBotNet
+</code></pre></div></div>
+
+<h3 id="4-scouting">4. Scouting</h3>
+
+<p>What is the C2 server? Provide the domain as the answer.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>covidfunds.net
+</code></pre></div></div>
+
+<h3 id="5-this-is-nice-might-stay-a-while">5. This is nice, might stay a while…</h3>
+
+<p>How does the malware persist? SHA1 hash the path of the persistence location.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>echo -n “/full/path”</td>
+      <td>sha1sum</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/init.d/zorr
+</code></pre></div></div>
+
+<h3 id="6-license-and-registration-please">6. License and Registration Please</h3>
+
+<p>The malware creates a UUID and stores it in a file, what is the name of this file. 
+Provide the SHA1 hash of the full path as the flag.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/tmp/.serverauth.tn6aUcM0uM
+</code></pre></div></div>
+
+<h3 id="8-shared-secrets-not-confirmed">8. Shared Secrets [Not confirmed]</h3>
+
+<p>The malware creates a shared-memory object and stores a flag inside. Recover the flag.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>covid{kEepItSeCrETmR.Fr0dO!}
+</code></pre></div></div>
+
+<h3 id="9-protocol1-not-confirmed">9. PROTOCOL1 [Not confirmed]</h3>
+
+<p>What string/message does the malware use to register itself with the C2 server as a new infected host?</p>
+
+<p>Include the FULL message (including client specific data).</p>
+
+<p>All protocol questions will be less points after this one.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NEW goHct1tkuuvjiey0w9B
+</code></pre></div></div>
+
+<h2 id="tom-nook---internet-traffic---part-i">Tom Nook - Internet traffic - Part I</h2>
+
+<ul>
+  <li>Challenge contain a .pcap file inside 7z archive</li>
+  <li>when i analyzed the protocol hierarchy</li>
+  <li>it contains tcp,ssh,http
+<img src="/blog/assets/images/wireshark.png" alt="image" /></li>
+  <li>when i checked the first tcp stream i got the flag</li>
+</ul>
+:ET
